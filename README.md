@@ -1,12 +1,22 @@
 # Match-Cards-Game
 
-This is a Java program for playing the Matching Card Pairs game. 
+### This is a Java program of the [Matching Card Pairs](https://en.wikipedia.org/wiki/Concentration_(card_game)#:~:text=Concentration%20is%20a%20round%20game,over%20pairs%20of%20matching%20cards.&text=Concentration%20can%20be%20played%20with,a%20solitaire%20or%20patience%20game.) game. After specifying a game size of `n` (at least 2 cards), users can choose to `PLAY` the game themselves or `COMPARE` how two different AIs play. The bad AI flips random legal cards with equal probability independent of past while the good AI plays with perfect memory of past flipped cards, always scoring 2n or better.
 
+To run the program in the command terminal, navigate to the `src` folder:
 ```
 $ cd .../Match-Cards-Game/src
+```
+Compile the source files:
+```
 $ javac hw2/*.java
+```
+
+Run the following file containing the `main` function and follow the prompts:
+```
 $ java hw2.PlayCard
 ```
+
+Here is a sample 16-card game where the program asks users to specify pairs of cards to flip:
 
 ```
 _____________________________
@@ -41,37 +51,9 @@ _____________________________
 
 That was not a match.
 
-_____________________________
 
-0: *	1: *	2: *	3: *	
-4: *	5: *	6: *	7: *	
-8: *	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
+...
 
-Pick the first card:
-1
-
-_____________________________
-
-0: *	1: B	2: *	3: *	
-4: *	5: *	6: *	7: *	
-8: *	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-Pick the second card:
-2
-
-_____________________________
-
-0: *	1: B	2: D	3: *	
-4: *	5: *	6: *	7: *	
-8: *	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-That was not a match.
 
 _____________________________
 
@@ -96,271 +78,9 @@ Pick the second card:
 3
 You got a match!
 
-_____________________________
 
-0: *	1: *	2: D	3: D	
-4: *	5: *	6: *	7: *	
-8: *	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
+...
 
-Pick the first card:
-4
-
-_____________________________
-
-0: *	1: *	2: D	3: D	
-4: D	5: *	6: *	7: *	
-8: *	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-Pick the second card:
-5
-
-_____________________________
-
-0: *	1: *	2: D	3: D	
-4: D	5: C	6: *	7: *	
-8: *	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-That was not a match.
-
-_____________________________
-
-0: *	1: *	2: D	3: D	
-4: *	5: *	6: *	7: *	
-8: *	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-Pick the first card:
-6
-
-_____________________________
-
-0: *	1: *	2: D	3: D	
-4: *	5: *	6: B	7: *	
-8: *	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-Pick the second card:
-1
-You got a match!
-
-_____________________________
-
-0: *	1: B	2: D	3: D	
-4: *	5: *	6: B	7: *	
-8: *	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-Pick the first card:
-7
-
-_____________________________
-
-0: *	1: B	2: D	3: D	
-4: *	5: *	6: B	7: A	
-8: *	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-Pick the second card:
-0
-You got a match!
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: *	6: B	7: A	
-8: *	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-Pick the first card:
-8
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: *	6: B	7: A	
-8: C	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-Pick the second card:
-5
-You got a match!
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-Pick the first card:
-9
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: A	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-Pick the second card:
-10
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: A	10: B	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-That was not a match.
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-Pick the first card:
-11
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: *	10: *	11: C	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-Pick the second card:
-12
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: *	10: *	11: C	
-12: B	13: *	14: *	15: *	
-_____________________________
-
-That was not a match.
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: *	10: *	11: *	
-12: *	13: *	14: *	15: *	
-_____________________________
-
-Pick the first card:
-12
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: *	10: *	11: *	
-12: B	13: *	14: *	15: *	
-_____________________________
-
-Pick the second card:
-10
-You got a match!
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: *	10: B	11: *	
-12: B	13: *	14: *	15: *	
-_____________________________
-
-Pick the first card:
-13
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: *	10: B	11: *	
-12: B	13: C	14: *	15: *	
-_____________________________
-
-Pick the second card:
-4
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: D	5: C	6: B	7: A	
-8: C	9: *	10: B	11: *	
-12: B	13: C	14: *	15: *	
-_____________________________
-
-That was not a match.
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: *	10: B	11: *	
-12: B	13: *	14: *	15: *	
-_____________________________
-
-Pick the first card:
-13
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: *	10: B	11: *	
-12: B	13: C	14: *	15: *	
-_____________________________
-
-Pick the second card:
-11
-You got a match!
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: *	10: B	11: C	
-12: B	13: C	14: *	15: *	
-_____________________________
-
-Pick the first card:
-14
-
-_____________________________
-
-0: A	1: B	2: D	3: D	
-4: *	5: C	6: B	7: A	
-8: C	9: *	10: B	11: C	
-12: B	13: C	14: D	15: *	
-_____________________________
-
-Pick the second card:
-4
-You got a match!
 
 _____________________________
 
